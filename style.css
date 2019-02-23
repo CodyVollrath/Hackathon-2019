@@ -32,10 +32,11 @@ p {
 #FullName, #HomeAddress, #ContactInfo, #BusinessAddress, #BusinessContact {
 	padding: 5px;
 	width: 471px;
-	font-family: Helvetica, sans-serif;
+	font-family: "Arial";
 	font-size: 1.4em;
 	margin: 0px 0px 10px 0px;
 	border: 2px solid #ccc;
+    position: relative;
 }
 
 #contact-area textarea {
@@ -59,3 +60,18 @@ label {
 	padding-top: 5px;
 	font-size: 1.4em;
 }
+
+ul {
+    font-size: 1.5em;
+    text
+    font-family: "Verdana";
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+h2 {
+    font-family: "Arial";
+    text-align: center;
+    color: darkblue;
+}
+

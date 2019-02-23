@@ -1,0 +1,13 @@
+body {
+	font: Rokkitt;
+	font-weight: 400;
+}
+form {
+	font-weight: 300
+	margin: auto;
+	width: 75%;
+	border: 2px #FF00FF solid;
+	padding: 10px;
+	text-align: center;
+	
+}

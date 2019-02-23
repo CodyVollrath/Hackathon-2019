@@ -10,8 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
 	<script src = "PhoneNumber.js"></script>
+	<link href="../assets/jquery.signaturepad.css" rel="stylesheet">
 	<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
 	<script src = "PayPal.js"></script>
+</head>
   </head>
 
   <body> 	
@@ -242,8 +244,44 @@
         	</ul>
   		</div>
 
-  		<script>paypal.Buttons().render('#ApplicationForm');</script>
+  		<div id="AboutYou">
+  			<label for = "occupation">Occupation</label>
+  			<input id = "occupation" type = "text" name = "Occupation">
+  			<br>
+  			<label for = "clubActivties">What projects, programs and fundraisers would you like the club to consider?</label>
+  			<br>
+  			<textarea rows="4" cols = "50"></textarea>
+  		</div>
 
+  		<div id = "sig sigWrapper">
+  			
+  		</div>
+
+  		<div id = "sponser">
+  			<label for = "sponsers">Sponsor</label>
+  			<select id = "sponsers">
+  				<option value = "">- select a sponsor -</option>
+  				<option value = "Catherine Robison 21506-063">Catherine Robison 21506-063</option>
+  				<option value = "John Doe 21506-034">John Doe 21506-034</option>
+  				<option value = "John Smith 21504-034">John Smith 21504-034</option>
+  				<option value = "Danny Phantom 23453-032">Danny Phantom 23453-032</option>
+  				<option value = "Marck ZUCC 23453-020">Marck ZUCC 23453-020</option>
+  				<option value = "Doge Dogey 23652-012">Doge Dogey 23652-012</option>
+  			</select>
+  			<label for = "club"> Club</label>
+  			 <select id = "club">
+
+  			 	<option value = "">- Select a club -</option>
+  				<option value = "Atlanta">Atlanta</option>
+  				<option value = "Nashville">Nashville</option>
+  				<option value = "New Orleans">New Orleans</option>
+  				<option value = "New York">New York</option>
+  				<option value = "San Bernadino">San Bernadino</option>
+  				<option value = "Chicago">Chicago</option>
+  			</select>
+  		</div>
+
+  		<script>paypal.Buttons().render('#ApplicationForm');</script>
   	</form>
   </body>
 </html>

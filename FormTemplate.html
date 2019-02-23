@@ -3,10 +3,10 @@
 <html>
 
   <head>
-    <meta charset="UTF-8">
     <title>Optimizer Form</title>
     <link rel="stylesheet" type="text/css" href="FormCSS.css">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt:300,400,700" rel="stylesheet">
+    <link rel="icon" href="icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
 	<script src = "PhoneNumber.js"></script>
@@ -15,7 +15,10 @@
 </head>
   </head>
 
-  <body> 	
+  <body>
+  	<div id = iconImage>
+  		<img src = "icon.png" alt = "Icon Image" width = "100" height="100">
+  	</div>
   	<form id = "ApplicationForm" action = "Email.php">
   		<h1 class = "headers">I AM JOINING</h1>
   		<div id = "FullName">
@@ -227,9 +230,6 @@
   			<label for = "businessEmail"> Email</label>
   			<input id = "businessEmail" type="email" name="Email" placeholder="johnDoe@email.com" required>
   		</div>
-  		<div id = "Submission">
-  			<input id = "submitButton" type="submit" name="submitButton">
-  		</div>
   		<div id = "InterestFinderCheckList">
   			<h3>Optimist International Member Interest Finder</h3>
   			<ul id = "checkList">
@@ -278,6 +278,9 @@
   				<option value = "San Bernadino">San Bernadino</option>
   				<option value = "Chicago">Chicago</option>
   			</select>
+  		</div>
+  		 <div id = "Submission">
+  			<input id = "submitButton" type="submit" name="submitButton">
   		</div>
 
   		<script>paypal.Buttons().render('#ApplicationForm');</script>

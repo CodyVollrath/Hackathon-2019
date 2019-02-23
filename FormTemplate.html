@@ -24,6 +24,20 @@
   			<label for = "LName"> Last Name</label>
   			<input id = "LName" type="text" name="LastName" placeholder = "Doe" required>
   		</div>
+  		<div id = "status">
+  			<label>Were you ever a Junior Optimist Member?</label>
+  			<label for = "optimistMemberYes"> Yes</label>
+  			<input id = "optimistMemberYes" class = "optimistMember" type = "radio" name = "JuniorMember">
+  			<label for = "optimistMemberNo"> No</label>
+  			<input id = "optimistMemberNo"class = "optimistMember" type = "radio" name = "JuniorMember">
+  			<br>
+  			<!-- Are you currently a fulltime student -->
+  			<label>Are you currently a full-time student?</label>
+  			<label for = "fullTimeStudentYes"> Yes</label>
+  			<input id = "fullTimeStudentYes" class = "fullTime" type = "radio" name = "fullTime">
+  			<label for = "fullTimeStudentNo"> No</label>
+  			<input id = "fullTimeStudentNo" class = "fullTime" type = "radio" name = "fullTime">
+  		</div>
   		<div id = "HomeAddress">
   			<h3 class = "headers">Home Information</h3>
   			<label for = "HomeStreet"> Street</label>
@@ -35,6 +49,7 @@
   			<label for = "HomeStateProvidence"> State/Province</label>
   			<select id = "HomeStateProvidence">
   				<!-- States -->
+  				<option value = ""></option>
 				<option value="AL">AL</option>
 				<option value="AK">AK</option>
 				<option value="AR">AR</option>	
@@ -129,6 +144,7 @@
   			<label for = "BusinessStateProvidence"> State/Province</label>
   			<select id = "BusinessStateProvidence">
   				<!-- States -->
+  				<option value = ""></option>
 				<option value="AL">AL</option>
 				<option value="AK">AK</option>
 				<option value="AR">AR</option>	
@@ -213,7 +229,7 @@
   		<div id = "Submission">
   			<input id = "submitButton" type="submit" name="submitButton">
   		</div>
-  		<div id = "InterestFinder">
+  		<div id = "InterestFinderCheckList">
   			<h3>Optimist International Member Interest Finder</h3>
   			<ul id = "checkList">
   				<li><input class = intlMember" type="checkbox"> Fellowship: Stimulates attendance, guest members and guest.Promotes fellowship beyond Club and community.</li>
@@ -222,9 +238,10 @@
   				<li><input class = intlMember" type="checkbox"> Finance: Plans and supervises the budget.</li>
   				<li><input class = intlMember" type="checkbox"> New Club Building: Conducts all activities involved in sponsoring a new Optimist Club.</li>
   				<li><input class = intlMember" type="checkbox"> Programs: Develops and executes plans to provide interesting programs for club meetings</li>
-  				<li><input class = intlMember" type="checkbox"> Youth Activiteis: Determines, plans and supervises youth projects.></li>
+  				<li><input class = intlMember" type="checkbox"> Youth Activiteis: Determines, plans and supervises youth projects.</li>
         	</ul>
   		</div>
+
   		<script>paypal.Buttons().render('#ApplicationForm');</script>
 
   	</form>

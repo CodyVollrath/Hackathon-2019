@@ -1,6 +1,7 @@
 body {
 	font: Rokkitt;
 	font-weight: 400;
+	background: #45FF30;
 }
 form {
 	font-weight: 300
@@ -9,5 +10,9 @@ form {
 	border: 2px #FF00FF solid;
 	padding: 10px;
 	text-align: center;
-	
+
+}
+.headers {
+	text-align: left;
+	text-decoration: underline; 
 }

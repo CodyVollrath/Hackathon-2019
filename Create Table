@@ -1,1 +1,0 @@
-CREATE TABLE `OptimistForm` ( `FirstName` TEXT, `LastName` TEXT, `Email` TEXT, `ZipCode` TEXT, `MemberShipLVL` TEXT, `HomePhone` TEXT, `CelPhone` TEXT )

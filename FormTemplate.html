@@ -1,19 +1,22 @@
+
 <!DOCTYPE html>
 <html>
 
   <head>
-    <meta charset="UTF-16">
+    <meta charset="UTF-8">
     <title>Optimizer Form</title>
     <link rel="stylesheet" type="text/css" href="FormCSS.css">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt:300,400,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
 	<script src = "PhoneNumber.js"></script>
+	<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+	<script src = "PayPal.js"></script>
   </head>
 
   <body> 	
   	<form id = "ApplicationForm">
-  		<h1>I AM JOINING</h1>
+  		<h1 class = "headers">I AM JOINING</h1>
   		<div id = "FullName">
   			<label for = "FName">First Name</label>
   			<input id = "FName" type="text" name= "FirstName" placeholder = "John"required>
@@ -22,14 +25,15 @@
   			<input id = "LName" type="text" name="LastName" placeholder = "Doe" required>
   		</div>
   		<div id = "HomeAddress">
-  			<label for = "Street"> Street</label>
-  			<input id = "Street" type = "text" name = "StreeName" placeholder = "1111 Racoon St."  required>
+  			<h3 class = "headers">Home Information</h3>
+  			<label for = "HomeStreet"> Street</label>
+  			<input id = "HomeStreet" type = "text" name = "HomeStreetName" placeholder = "1111 Racoon St."  required>
 
-  			<label for = "City"> City</label>
-  			<input id = "City" type = "text" name = "CityName" placeholder="Carrollton" required>
+  			<label for = "HomeCity"> City</label>
+  			<input id = "HomeCity" type = "text" name = "HomeCityName" placeholder= "Carrollton" required>
 
-  			<label for = "StateProvidence"> State/Province</label>
-  			<select id = "State">
+  			<label for = "HomeStateProvidence"> State/Province</label>
+  			<select id = "HomeStateProvidence">
   				<!-- States -->
 				<option value="AL">AL</option>
 				<option value="AK">AK</option>
@@ -96,19 +100,122 @@
 				<option value="AE">AE</option>				
 			</select>
 
-			<label for = "ZIP"> ZIP/Postal Code</label>
-			<input id = "ZIP" type="text" name="Postal" placeholder = "30117" required>			
+			<label for = "HomeZIP"> ZIP/Postal Code</label>
+			<input id = "HomeZIP" type="text" name="Postal" placeholder = "30117" required>			
   		</div>
 
   		<div id = "ContactInfo">
-  			<label for = "HomePhone"> Home Phone</label>
+  			<label for = "HomePhone"> Home-Phone</label>
   			<!-- Make sure every phone input has a class called phone -->
-  			<input id = "HomePhone" class = "phone" type = "text" name = "HomePhone" pattern = "[1-9]{1}[0-9]{9}" placeholder="(___) ___-____" maxLength = "14" required onkeypress = "return isNumberKey(event)"/>
+  			<input id = "HomePhone" class = "phone" type = "tel" name = "HomePhone" placeholder="(___) ___-____" maxLength = "14" required>
+
+  			<label for = "CellPhone"> Cell-Phone</label>
+
+  			<input id = "CellPhone" class = "phone" type = "tel" name = "CellPhone" placeholder="(___) ___-____" maxlength = "14" required><br>
+
+  			<label for = "email"> Email</label>
+  			<input id = "email" type="email" name="Email" placeholder="johnDoe@email.com" required>
+
   		</div>
 
   		<div id = "BusinessAddress">
+  			<h3 class = "headers">Business Information</h3>
+  			<label for = "BusinessStreet"> Street</label>
+  			<input id = "BusinessStreet" type = "text" name = "BusinessStreetName" placeholder = "1111 Racoon St."  required>
 
+  			<label for = "BusinessCity"> City</label>
+  			<input id = "City" type = "text" name = "BusinessCityName" placeholder="Carrollton" required>
+
+  			<label for = "BusinessStateProvidence"> State/Province</label>
+  			<select id = "BusinessStateProvidence">
+  				<!-- States -->
+				<option value="AL">AL</option>
+				<option value="AK">AK</option>
+				<option value="AR">AR</option>	
+				<option value="AZ">AZ</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DC">DC</option>
+				<option value="DE">DE</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="IA">IA</option>	
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="MA">MA</option>
+				<option value="MD">MD</option>
+				<option value="ME">ME</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MO">MO</option>	
+				<option value="MS">MS</option>
+				<option value="MT">MT</option>
+				<option value="NC">NC</option>	
+				<option value="NE">NE</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>			
+				<option value="NV">NV</option>
+				<option value="NY">NY</option>
+				<option value="ND">ND</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VT">VT</option>
+				<option value="VA">VA</option>
+				<option value="WA">WA</option>
+				<option value="WI">WI</option>	
+				<option value="WV">WV</option>
+				<option value="WY">WY</option>
+				<!-- Providence -->
+				<option value="AS">AS</option>
+				<option value="GU">GU</option>
+				<option value="MP">MP</option>
+				<option value="PR">PR</option>
+				<option value="UM">UM</option>
+				<option value="VI">VI</option>
+	
+				<!-- Military -->
+				<option value="AA">AA</option>
+				<option value="AP">AP</option>
+				<option value="AE">AE</option>				
+			</select>
+
+			<label for = "BusinessZIP"> ZIP/Postal Code</label>
+			<input id = "BusinessZIP" type="text" name="BusinessPostal" placeholder = "30117" required>
+            
   		</div>
+  		<div id = "BuisnessContact">
+  			<label for = "HomePhone"> Home-Phone</label>
+  			<!-- Make sure every phone input has a class called phone -->
+  			<input id = "HomePhone" class = "phone" type = "tel" name = "HomePhone" placeholder="(___) ___-____" maxLength = "14" required>
+
+  			<label for = "CellPhone"> Cell-Phone</label>
+
+  			<input id = "CellPhone" class = "phone" type = "tel" name = "CellPhone" placeholder="(___) ___-____" maxlength = "14" required><br>
+
+  			<label for = "businessEmail"> Email</label>
+  			<input id = "businessEmail" type="email" name="Email" placeholder="johnDoe@email.com" required>
+  		</div>
+  		<div id = "Submission">
+  			<input id = "submitButton" type="submit" name="submitButton">
+  		</div>
+  		<div id = "InterestFinder">
+  		<script>paypal.Buttons().render('#ApplicationForm');</script>
+
   	</form>
   </body>
 </html>
